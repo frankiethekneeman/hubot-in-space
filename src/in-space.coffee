@@ -12,7 +12,7 @@
 #   <optional notes required for the script>
 #
 # Author:
-#   Paul Lewis[@<org>]
+#   Francis Van Wetering
 
 module.exports = (robot) ->
   robot.respond /hello/, (msg) ->
