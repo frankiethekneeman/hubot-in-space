@@ -4,7 +4,7 @@ chai.use require 'sinon-chai'
 
 expect = chai.expect
 
-space_regexes = require '../src/regexes'
+space_regexes = require '../lib/regexes'
 
 describe 'in-space', ->
   beforeEach ->

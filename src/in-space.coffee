@@ -18,7 +18,7 @@
 # Author:
 #   Francis Van Wetering
 
-regexes = require './regexes'
+regexes = require '../lib/regexes'
 
 ###
    The latest copy of the information on people in space.
