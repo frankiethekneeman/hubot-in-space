@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/frankiethekneeman/hubot-in-space.svg?branch=master)](https://travis-ci.org/frankiethekneeman/hubot-in-space)
+
 # hubot-in-space
 
 A hubot script that explores who is in space *right now*.
