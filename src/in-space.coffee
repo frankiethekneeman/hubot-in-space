@@ -18,6 +18,8 @@
 # Author:
 #   Francis Van Wetering
 
+regexes = require './regexes'
+
 ###
    The latest copy of the information on people in space.
 ###
@@ -105,41 +107,43 @@ module.exports = (robot) ->
   ###
      Find out how many people are in space right now.
   ###
-  robot.respond /how many (people|folks|explorers|adventurers) are in space( right now)?/i, (msg) ->
+  robot.respond regexes.count, (msg) ->
     getData msg, (spaceData) ->
       msg.send "There are #{spaceData.number} people in space right now."
 
   ###
      Find out the names of all the people in space right now.
   ###
-  robot.respond /who('s| is) in space( right now)?/i, (msg) ->
+  robot.respond regexes.names, (msg) ->
     getData msg, (spaceData) ->
       msg.send "Currently in Space: " + spaceData.people.map((p) -> p.name).join(", ") + "."
       
   ###
      Get a picture of someone who is in space.
   ###
-  robot.respond /show me (.*?)\s*$/i, (msg) ->
+  robot.respond regexes.picture, (msg) ->
     aboutSpaceman msg, msg.match[1], (m)->
       msg.send m.biophoto
 
   ###
      Get the Biography of a space explorer.
   ###
-  robot.respond /tell me about (.*?)\s*$/i, (msg) ->
-    aboutSpaceman msg, msg.match[1], (m)->
+  robot.respond regexes.bio, (msg) ->
+    aboutSpaceman msg, msg.match[1], (m) ->
       msg.send m.bio
 
   ###
      Get the country of origin for a person in space.
   ###
-  robot.respond /where is (.*?)\s* from\b/i, (msg) ->
-    aboutSpaceman msg, msg.match[1], (m)->
+  robot.respond regexes.country, (msg) ->
+    aboutSpaceman msg, msg.match[1], (m) ->
       msg.send "#{m.countryflag}\n#{m.country}"
       
   ###
      Get the space location of someone who is in space.
   ###
-  robot.respond /where is (.*?)\s* stationed\b/i, (msg) ->
-    aboutSpaceman msg, msg.match[1], (m)->
+  robot.respond regexes.location, (msg) ->
+    aboutSpaceman msg, msg.match[1], (m) ->
       msg.send m.location
+
+
