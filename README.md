@@ -1,6 +1,6 @@
 # hubot-in-space
 
-A hubot script that does the things
+A hubot script that explores who is in space *right now*.
 
 See [`src/in-space.coffee`](src/in-space.coffee) for full documentation.
 
@@ -19,6 +19,6 @@ Then add **hubot-in-space** to your `external-scripts.json`:
 ## Sample Interaction
 
 ```
-user1>> hubot hello
-hubot>> hello!
+user1>> hubot how many people are in space right now?
+hubot>> There are 6 people in space right now.
 ```
