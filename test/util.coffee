@@ -4,7 +4,7 @@ chai.use require 'sinon-chai'
 
 expect = chai.expect
 
-space_utils = require '../lib/util'
+space_utils = require '../lib-cov/util'
 fauxSpaceData = require './mockData/fauxSpaceData'
 
 shouldNotFind = [
@@ -16,7 +16,8 @@ shouldNotFind = [
 
 randomCase = (string) ->
   newString =  ''
-  for i, ch of string
+  for i in [0..string.length]
+    ch = string.charAt(i)
     if Math.random() > 0.5
       newString += ch.toUpperCase()
     else 

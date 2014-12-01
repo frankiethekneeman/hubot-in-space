@@ -4,8 +4,8 @@ chai.use require 'sinon-chai'
 
 expect = chai.expect
 
-space_regexes = require '../lib/regexes'
-space_functions = require '../lib/funcs'
+space_regexes = require '../lib-cov/regexes'
+space_functions = require '../lib-cov/funcs'
 
 describe 'in-space', ->
   before ->
@@ -13,7 +13,7 @@ describe 'in-space', ->
       respond: sinon.spy()
       hear: sinon.spy()
 
-    require('../src/in-space')(@robot)
+    require('../src-cov/in-space')(@robot)
 
   for k, v of space_regexes
       it 'registers a respond listener for ' + k, ->

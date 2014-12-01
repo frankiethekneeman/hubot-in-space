@@ -4,7 +4,7 @@ chai.use require 'sinon-chai'
 
 expect = chai.expect
 
-space_regexes = require '../lib/regexes'
+space_regexes = require '../lib-cov/regexes'
 
 regexTests =
     count:

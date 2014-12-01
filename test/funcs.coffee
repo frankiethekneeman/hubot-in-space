@@ -4,8 +4,8 @@ chai.use require 'sinon-chai'
 
 expect = chai.expect
 
-space_regexes = require '../lib/regexes'
-space_functions = require '../lib/funcs'
+space_regexes = require '../lib-cov/regexes'
+space_functions = require '../lib-cov/funcs'
 fauxSpaceData = require './mockData/fauxSpaceData'
 
 tests = 

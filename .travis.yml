@@ -5,3 +5,4 @@ node_js:
 notifications:
   email: false
 script: ./script/test
+after_script: CODECLIMATE_REPO_TOKEN=094212d256c7224bdd97c0cd8e3f8de232d2512cf0184670abef7e475ca10d93 codeclimate < coverage.lcov

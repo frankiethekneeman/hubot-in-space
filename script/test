@@ -3,4 +3,14 @@
 # bootstrap environment
 source script/bootstrap
 
+#Get rid of old coverage stuff
+rm -rf *-cov/
+#Generate Coverage
+coffeeCoverage lib lib-cov
+coffeeCoverage src src-cov
+sed -i 's@\(../\(lib\|src\)\)\(/\w\+\)@\1-cov\3@' src-cov/*.js lib-cov/*.js
+./scri  pt/test
+
 mocha --compilers coffee:coffee-script  
+
+mocha --compilers coffee:coffee-script -R mocha-lcov-reporter > coverage.lcov

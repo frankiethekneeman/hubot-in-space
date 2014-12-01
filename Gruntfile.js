@@ -3,6 +3,7 @@
 module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-mocha-cov');
   grunt.loadNpmTasks('grunt-release');
 
   grunt.initConfig({
@@ -14,6 +15,18 @@ module.exports = function(grunt) {
         },
         src: ['test/**/*.coffee']
       }
+    },
+    
+    mochacov: {
+      options: {
+        //coveralls: true,
+        reporter: 'mocha-lcov-reporter',
+        require: [
+          'coffee-script',
+          'mocha-lcov-reporter'
+        ]
+      },
+      all: ['test/*.coffee']
     },
     release: {
       options: {
@@ -36,5 +49,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['mochaTest']);
   grunt.registerTask('test:watch', ['watch']);
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('default', ['mochacov']);
 };
