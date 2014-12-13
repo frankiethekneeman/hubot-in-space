@@ -43,3 +43,17 @@ module.exports =
   location: (msg) ->
     util.aboutSpaceman msg, msg.match[1], (m) ->
       msg.send m.location
+  
+  ###
+     Find out how long someone has been in space.
+  ###
+  time: (msg) ->
+    util.aboutSpaceman msg, msg.match[1], (m)->
+      msg.send Math.ceil( (new Date() - new Date(m.launchdate))/(1000*60*60*24)) + " days"
+
+  ###
+    find out how many total days someone has spent in space.
+  ###
+  total: (msg) ->
+    util.aboutSpaceman msg, msg.match[1], (m)->
+      msg.send Math.ceil( (new Date() - new Date(m.launchdate))/(1000*60*60*24)) + m.careerdays

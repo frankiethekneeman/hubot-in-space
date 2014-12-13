@@ -17,12 +17,16 @@ tests =
   bio: {}
   country: {}
   location: {}
+  time: {}
+  total: {}
 
 for i, person of fauxSpaceData.people
-  tests.picture["show me #{person.name}"] = person.biophoto
-  tests.bio["tell me about #{person.name}"] = person.bio
-  tests.country["where is #{person.name} from"] = "#{person.countryflag}\n#{person.country}"
-  tests.location["where is #{person.name} stationed"] = person.location
+  tests.picture["show me space explorer #{person.name}"] = person.biophoto
+  tests.bio["tell me about space explorer #{person.name}"] = person.bio
+  tests.country["where is space explorer #{person.name} from"] = "#{person.countryflag}\n#{person.country}"
+  tests.location["where is space explorer #{person.name} stationed"] = person.location
+  tests.time["how long has space explorer #{person.name} been in space"] = person.daysinspace + " days"
+  tests.total["how many days has space explorer #{person.name} spent in space"] = person.daysinspace + person.careerdays
 
 
 describe "Functions", ->
