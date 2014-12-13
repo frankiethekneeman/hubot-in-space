@@ -9,6 +9,7 @@ module.exports =
       country: "USA"
       countryflag: "http://howmanypeopleareinspacerightnow.com/app/flags/flag-usa.jpg"
       launchdate: "2014-09-25"
+      daysinspace: Math.ceil((new Date() - new Date(2014, 8, 25))/(1000*24*60*60)) #Not in the normal Data Model
       careerdays: 11
       title: "Flight Engineer"
       location: "International Space Station"
@@ -24,6 +25,7 @@ module.exports =
       country: "Russia"
       countryflag: "http://howmanypeopleareinspacerightnow.com/app/flags/flag-russia.jpg"
       launchdate: "2014-09-25"
+      daysinspace: Math.ceil((new Date() - new Date(2014, 8, 25))/(1000*24*60*60)) #Not in the normal Data Model
       careerdays: 0
       title: "Flight Engineer"
       location: "International Space Station"
@@ -39,6 +41,7 @@ module.exports =
       country: "Russia"
       countryflag: "http://howmanypeopleareinspacerightnow.com/app/flags/flag-russia.jpg"
       launchdate: "2014-09-25"
+      daysinspace: Math.ceil((new Date() - new Date(2014, 8, 25))/(1000*24*60*60)) #Not in the normal Data Model
       careerdays: 165
       title: "Flight Engineer"
       location: "International Space Station"
@@ -54,6 +57,7 @@ module.exports =
       country: "USA"
       countryflag: "http://howmanypeopleareinspacerightnow.com/app/flags/flag-usa.jpg"
       launchdate: "2014-11-23"
+      daysinspace: Math.ceil((new Date() - new Date(2014, 10, 23))/(1000*24*60*60)) #Not in the normal Data Model
       careerdays: 14
       title: "Flight Engineer"
       location: "International Space Station"
@@ -69,6 +73,7 @@ module.exports =
       country: "Italy"
       countryflag: "http://howmanypeopleareinspacerightnow.com/app/flags/flag-italy.jpg"
       launchdate: "2014-11-23"
+      daysinspace: Math.ceil((new Date() - new Date(2014, 10, 23))/(1000*24*60*60)) #Not in the normal Data Model
       careerdays: 0
       title: "Flight Engineer"
       location: "International Space Station"
@@ -84,6 +89,7 @@ module.exports =
       country: "Russia"
       countryflag: "http://howmanypeopleareinspacerightnow.com/app/flags/flag-russia.jpg"
       launchdate: "2014-11-23"
+      daysinspace: Math.ceil((new Date() - new Date(2014, 10, 23))/(1000*24*60*60)) #Not in the normal Data Model
       careerdays: 166
       title: "Flight Engineer"
       location: "International Space Station"
